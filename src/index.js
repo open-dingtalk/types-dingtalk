@@ -13,7 +13,7 @@ function cur (dir){
 
 function APIDingtalk(){
   return new Promise(function(resolve,reject){
-    fs.readFile(cur('weex-dingtalk'),'utf8',function(err,data){
+    fs.readFile(cur('dingtalk'),'utf8',function(err,data){
       if (err){
         console.log(JSON.stringify(err));
         return;
@@ -142,7 +142,7 @@ APIDingtalk().then(function(data){
   });
   output += '}\n\n';
   output += data;
-  fs.writeFile(resolve('weex-dingtalk.d.ts'),output,function(err){
+  fs.writeFile(resolve('types-dingtalk.d.ts'),output,function(err){
     if(err){
       console.log(JSON.stringify(err));
     } else {
