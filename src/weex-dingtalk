@@ -1,0 +1,17 @@
+interface EventEmitter{
+  emit(type:string,parameter:any):void;
+  off(type:string,listener:Function):void;
+  on(type:string,listener:Function):void;
+  once(type:string,listener:Function):void;
+}
+
+declare module 'weex-dingtalk'{
+  export var api: APIDingtalk;
+  export var EventEmitter: EventEmitter;
+  export function config(parameter:any):void;
+  export function error(callback:Function):void;
+  export function init():void;
+  export function off(type:string,listener:Function,useCapture:boolean):void;
+  export function on(type:string,listener:Function,useCapture:boolean):void;
+  export function ready(callback:Function):void;
+}
