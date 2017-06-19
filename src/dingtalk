@@ -6,7 +6,7 @@ interface EventEmitter{
 }
 
 declare module 'weex-dingtalk'{
-  export var api: APIDingtalk;
+  export var apis: APIDingtalk;
   export var EventEmitter: EventEmitter;
   export function config(parameter:any):void;
   export function error(callback:Function):void;
